@@ -20,6 +20,8 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
 
 ADD 000-default.conf /etc/apache2/sites-available/000-default.conf
 
+RUN mkdir -p /app/www && rm -fr /var/www/html && ln -s /app/www /var/www/html
+
 VOLUME ["/app"]
 
 EXPOSE 22
