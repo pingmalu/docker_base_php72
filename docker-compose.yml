@@ -1,0 +1,15 @@
+php72:
+        image: reg.qiniu.com/pub/php:7.2
+        ports:
+                - "11114:22"
+                - "11115:80"
+        volumes:
+                - ./app:/app
+        container_name: php72
+        hostname: php72
+        command:
+                - /bin/bash
+                - -c
+                - |
+                        cron
+                        /usr/sbin/sshd -D
