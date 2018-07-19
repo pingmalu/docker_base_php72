@@ -14,4 +14,4 @@ php72:
                         cron
                         /usr/sbin/sshd -D
         external_links:
-                - base
+                - mysql
